@@ -1,0 +1,542 @@
+[E 241023 23:06:53 test:25] Logout failed: name 'smartApi' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 59, in getCandleData
+        CS_data = smartApi.getCandleData(historicParam)
+                  ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 22, in logout_broker
+        logout=smartApi.terminateSession('MNGZA1072')
+               ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+[E 241023 23:06:53 test:107] Invalid Token: The provided token is not valid.
+[E 241023 23:06:53 test:25] Logout failed: name 'smartApi' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 59, in getCandleData
+        CS_data = smartApi.getCandleData(historicParam)
+                  ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 22, in logout_broker
+        logout=smartApi.terminateSession('MNGZA1072')
+               ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 108, in <module>
+        raise e
+      File "D:\python project\test.py", line 94, in <module>
+        Sh_data=getCandleData()
+      File "D:\python project\test.py", line 80, in getCandleData
+        logout_broker()
+        ~~~~~~~~~~~~~^^
+      File "D:\python project\test.py", line 28, in logout_broker
+        data = smartApi.generateSession(username, pwd, totp)
+               ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 22, in logout_broker
+        logout=smartApi.terminateSession('MNGZA1072')
+               ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+[E 241023 23:09:16 test:40] Logout failed: name 'smartApi' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 74, in fetchCandleData
+        CS_data = smartApi.getCandleData(historicParam)
+                  ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 37, in logout_broker
+        logout=smartApi.terminateSession('MNGZA1072')
+               ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+[E 241023 23:09:16 test:122] Invalid Token: The provided token is not valid.
+[E 241023 23:09:16 test:40] Logout failed: name 'smartApi' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 74, in fetchCandleData
+        CS_data = smartApi.getCandleData(historicParam)
+                  ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 37, in logout_broker
+        logout=smartApi.terminateSession('MNGZA1072')
+               ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 123, in <module>
+        raise e
+      File "D:\python project\test.py", line 109, in <module>
+        Sh_data=fetchCandleData()
+      File "D:\python project\test.py", line 95, in fetchCandleData
+        logout_broker()
+        ~~~~~~~~~~~~~^^
+      File "D:\python project\test.py", line 43, in logout_broker
+        data = smartApi.generateSession(username, pwd, totp)
+               ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 37, in logout_broker
+        logout=smartApi.terminateSession('MNGZA1072')
+               ^^^^^^^^
+    NameError: name 'smartApi' is not defined
+[E 241023 23:17:11 test:89] Historic Api failed: name 'openpyxl' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 40, in <module>
+        wb=openpyxl.load_workbook("NSE_stockTokens.xlsx")
+           ^^^^^^^^
+    NameError: name 'openpyxl' is not defined
+[E 241023 23:17:35 test:90] Historic Api failed: Couldn't parse the JSON response received from the server: b'Access denied because of exceeding access rate'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        data = json.loads(r.content.decode("utf8"))
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 344, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 362, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 59, in <module>
+        CS_data = smartApi.getCandleData(historicParam)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 465, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 233, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+            content=r.content))
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b'Access denied because of exceeding access rate'
+[E 241023 23:19:44 test:92] Historic Api failed: Couldn't parse the JSON response received from the server: b'Access denied because of exceeding access rate'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        data = json.loads(r.content.decode("utf8"))
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 344, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 362, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 59, in <module>
+        CS_data = smartApi.getCandleData(historicParam)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 465, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 233, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+            content=r.content))
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b'Access denied because of exceeding access rate'
+[E 241023 23:20:45 test:92] Historic Api failed: name 'file_path' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 78, in <module>
+        with pd.ExcelWriter(file_path, engine='openpyxl', mode='a') as writer:
+                            ^^^^^^^^^
+    NameError: name 'file_path' is not defined
+[E 241023 23:21:15 test:92] Historic Api failed: Invalid file path or buffer object type: <class 'openpyxl.workbook.workbook.Workbook'>
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 78, in <module>
+        with pd.ExcelWriter(wb, engine='openpyxl', mode='a') as writer:
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 61, in __init__
+        super().__init__(
+        ~~~~~~~~~~~~~~~~^
+            path,
+            ^^^^^
+        ...<3 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_base.py", line 1246, in __init__
+        self._handles = get_handle(
+                        ~~~~~~~~~~^
+            path, mode, storage_options=storage_options, is_text=False
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py", line 728, in get_handle
+        ioargs = _get_filepath_or_buffer(
+            path_or_buf,
+        ...<3 lines>...
+            storage_options=storage_options,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py", line 472, in _get_filepath_or_buffer
+        raise ValueError(msg)
+    ValueError: Invalid file path or buffer object type: <class 'openpyxl.workbook.workbook.Workbook'>
+[E 241023 23:22:02 test:92] Historic Api failed: Invalid file path or buffer object type: <class 'openpyxl.workbook.workbook.Workbook'>
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 78, in <module>
+        with pd.ExcelWriter(wb, engine='openpyxl', mode='a') as writer:
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 61, in __init__
+        super().__init__(
+        ~~~~~~~~~~~~~~~~^
+            path,
+            ^^^^^
+        ...<3 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_base.py", line 1246, in __init__
+        self._handles = get_handle(
+                        ~~~~~~~~~~^
+            path, mode, storage_options=storage_options, is_text=False
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py", line 728, in get_handle
+        ioargs = _get_filepath_or_buffer(
+            path_or_buf,
+        ...<3 lines>...
+            storage_options=storage_options,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py", line 472, in _get_filepath_or_buffer
+        raise ValueError(msg)
+    ValueError: Invalid file path or buffer object type: <class 'openpyxl.workbook.workbook.Workbook'>
+[E 241023 23:22:18 test:92] Historic Api failed: Invalid file path or buffer object type: <class 'openpyxl.workbook.workbook.Workbook'>
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 78, in <module>
+        with pd.ExcelWriter(wb, engine='openpyxl', mode='a') as writer:
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 61, in __init__
+        super().__init__(
+        ~~~~~~~~~~~~~~~~^
+            path,
+            ^^^^^
+        ...<3 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_base.py", line 1246, in __init__
+        self._handles = get_handle(
+                        ~~~~~~~~~~^
+            path, mode, storage_options=storage_options, is_text=False
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py", line 728, in get_handle
+        ioargs = _get_filepath_or_buffer(
+            path_or_buf,
+        ...<3 lines>...
+            storage_options=storage_options,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py", line 472, in _get_filepath_or_buffer
+        raise ValueError(msg)
+    ValueError: Invalid file path or buffer object type: <class 'openpyxl.workbook.workbook.Workbook'>
+[E 241023 23:23:38 test:92] Historic Api failed: [Errno 2] No such file or directory: 'data_candlestick.xlsx'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 78, in <module>
+        with pd.ExcelWriter("data_candlestick.xlsx", engine='openpyxl', mode='a') as writer:
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 61, in __init__
+        super().__init__(
+        ~~~~~~~~~~~~~~~~^
+            path,
+            ^^^^^
+        ...<3 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_base.py", line 1246, in __init__
+        self._handles = get_handle(
+                        ~~~~~~~~~~^
+            path, mode, storage_options=storage_options, is_text=False
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+        handle = open(handle, ioargs.mode)
+    FileNotFoundError: [Errno 2] No such file or directory: 'data_candlestick.xlsx'
+[E 241023 23:24:30 test:92] Historic Api failed: property 'book' of 'OpenpyxlWriter' object has no setter
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 79, in <module>
+        writer.book = wb
+        ^^^^^^^^^^^
+    AttributeError: property 'book' of 'OpenpyxlWriter' object has no setter
+[E 241023 23:25:03 test:92] Historic Api failed: property 'book' of 'OpenpyxlWriter' object has no setter
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 79, in <module>
+        writer.book = wb
+        ^^^^^^^^^^^
+    AttributeError: property 'book' of 'OpenpyxlWriter' object has no setter
+[E 241023 23:30:08 test:92] Historic Api failed: property 'book' of 'OpenpyxlWriter' object has no setter
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 79, in <module>
+        writer.book = wb
+        ^^^^^^^^^^^
+    AttributeError: property 'book' of 'OpenpyxlWriter' object has no setter
+[E 241023 23:31:41 test:92] Historic Api failed: 'OpenpyxlWriter' object has no attribute 'save'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 85, in <module>
+        writer.save()
+        ^^^^^^^^^^^
+    AttributeError: 'OpenpyxlWriter' object has no attribute 'save'
+[E 241023 23:32:15 test:90] Historic Api failed: Sheet 'AARTIIND' already exists and if_sheet_exists is set to 'error'.
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 82, in <module>
+        df.to_excel(writer, sheet_name=sh1.cell(i, 1).value, index=False)
+        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+        return func(*args, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 2417, in to_excel
+        formatter.write(
+        ~~~~~~~~~~~~~~~^
+            excel_writer,
+            ^^^^^^^^^^^^^
+        ...<6 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\excel.py", line 952, in write
+        writer._write_cells(
+        ~~~~~~~~~~~~~~~~~~~^
+            formatted_cells,
+            ^^^^^^^^^^^^^^^^
+        ...<3 lines>...
+            freeze_panes=freeze_panes,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 463, in _write_cells
+        raise ValueError(
+        ...<2 lines>...
+        )
+    ValueError: Sheet 'AARTIIND' already exists and if_sheet_exists is set to 'error'.
+[E 241023 23:33:12 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Error: Something Went Wrong, Please Try After Sometime. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'exchange': 'NSE', 'symboltoken': 7, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 03:30'}, Response: {'message': 'Something Went Wrong, Please Try After Sometime', 'errorcode': 'AB1004', 'status': False, 'data': None}
+[E 241023 23:33:12 test:90] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+        return self._range.index(new_key)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^
+    ValueError: 0 is not in range
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 66, in <module>
+        df[0] = pd.to_datetime(df[0], format='%Y-%m-%dT%H:%M:%S%z')
+                               ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241023 23:33:50 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Error: Something Went Wrong, Please Try After Sometime. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'exchange': 'NSE', 'symboltoken': 7, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 03:30'}, Response: {'message': 'Something Went Wrong, Please Try After Sometime', 'errorcode': 'AB1004', 'status': False, 'data': None}
+[E 241023 23:33:50 test:90] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+        return self._range.index(new_key)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^
+    ValueError: 0 is not in range
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 66, in <module>
+        df[0] = pd.to_datetime(df[0], format='%Y-%m-%dT%H:%M:%S%z')
+                               ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241023 23:34:28 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Error: Something Went Wrong, Please Try After Sometime. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'exchange': 'NSE', 'symboltoken': 7, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 03:30'}, Response: {'message': 'Something Went Wrong, Please Try After Sometime', 'errorcode': 'AB1004', 'status': False, 'data': None}
+[E 241023 23:34:28 test:90] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+        return self._range.index(new_key)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^
+    ValueError: 0 is not in range
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 66, in <module>
+        df[0] = pd.to_datetime(df[0], format='%Y-%m-%dT%H:%M:%S%z')
+                               ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241023 23:36:21 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Error: Something Went Wrong, Please Try After Sometime. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'exchange': 'NSE', 'symboltoken': 7, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 03:30'}, Response: {'message': 'Something Went Wrong, Please Try After Sometime', 'errorcode': 'AB1004', 'status': False, 'data': None}
+[E 241023 23:36:21 test:90] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+        return self._range.index(new_key)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^
+    ValueError: 0 is not in range
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 66, in <module>
+        df[0] = pd.to_datetime(df[0], format='%Y-%m-%dT%H:%M:%S%z')
+                               ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241023 23:37:36 test:90] Historic Api failed: name 'time' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 85, in <module>
+        time.sleep(1)
+        ^^^^
+    NameError: name 'time' is not defined. Did you forget to import 'time'?
+[E 241023 23:41:35 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Error: Something Went Wrong, Please Try After Sometime. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'exchange': 'NSE', 'symboltoken': 7, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 03:30'}, Response: {'message': 'Something Went Wrong, Please Try After Sometime', 'errorcode': 'AB1004', 'status': False, 'data': None}
+[E 241023 23:41:35 test:91] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+        return self._range.index(new_key)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^
+    ValueError: 0 is not in range
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 67, in <module>
+        df[0] = pd.to_datetime(df[0], format='%Y-%m-%dT%H:%M:%S%z')
+                               ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241023 23:43:39 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Error: Something Went Wrong, Please Try After Sometime. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'exchange': 'NSE', 'symboltoken': 7, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 03:30'}, Response: {'message': 'Something Went Wrong, Please Try After Sometime', 'errorcode': 'AB1004', 'status': False, 'data': None}
+[E 241023 23:43:39 test:91] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+        return self._range.index(new_key)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^
+    ValueError: 0 is not in range
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 67, in <module>
+        df[0] = pd.to_datetime(df[0], format='%Y-%m-%dT%H:%M:%S%z')
+                               ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241023 23:46:31 test:91] Historic Api failed: Sheet 'AARTIIND' already exists and if_sheet_exists is set to 'error'.
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 83, in <module>
+        df.to_excel(writer, sheet_name=sh1.cell(i, 1).value, index=False)
+        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+        return func(*args, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 2417, in to_excel
+        formatter.write(
+        ~~~~~~~~~~~~~~~^
+            excel_writer,
+            ^^^^^^^^^^^^^
+        ...<6 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\excel.py", line 952, in write
+        writer._write_cells(
+        ~~~~~~~~~~~~~~~~~~~^
+            formatted_cells,
+            ^^^^^^^^^^^^^^^^
+        ...<3 lines>...
+            freeze_panes=freeze_panes,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 463, in _write_cells
+        raise ValueError(
+        ...<2 lines>...
+        )
+    ValueError: Sheet 'AARTIIND' already exists and if_sheet_exists is set to 'error'.
+[E 241023 23:58:57 test:93] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 0
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 78, in <module>
+        print(df[0])
+              ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241023 23:59:26 test:93] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 0
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 78, in <module>
+        print(df[:][0])
+              ~~~~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
