@@ -1,0 +1,519 @@
+[E 241024 00:02:47 test:93] Historic Api failed: 'DataFrame' object has no attribute 'series'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 78, in <module>
+        print(df.series[0])
+              ^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 6299, in __getattr__
+        return object.__getattribute__(self, name)
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+    AttributeError: 'DataFrame' object has no attribute 'series'. Did you mean: '_series'?
+[E 241024 00:03:11 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Error: Something Went Wrong, Please Try After Sometime. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'exchange': 'NSE', 'symboltoken': 'token', 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 15:30'}, Response: {'message': 'Something Went Wrong, Please Try After Sometime', 'errorcode': 'AB1004', 'status': False, 'data': None}
+[E 241024 00:03:11 test:93] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+        return self._range.index(new_key)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^
+    ValueError: 0 is not in range
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 67, in <module>
+        df[0] = pd.to_datetime(df[0], format='%Y-%m-%dT%H:%M:%S%z')
+                               ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241024 00:03:26 test:93] Historic Api failed: 'DataFrame' object has no attribute 'series'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 78, in <module>
+        print(df.series[0])
+              ^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 6299, in __getattr__
+        return object.__getattribute__(self, name)
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+    AttributeError: 'DataFrame' object has no attribute 'series'. Did you mean: '_series'?
+[E 241024 00:21:37 test:105] Historic Api failed: name 'to_datetime' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 85, in <module>
+        print("C1Value: " + to_datetime(df.loc[(df['high']>= C1Value) & (df['low']<= C1Value)].head(1)['datetime']))
+                            ^^^^^^^^^^^
+    NameError: name 'to_datetime' is not defined. Did you mean: 'datetime'?
+[E 241024 00:22:41 test:105] Historic Api failed: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 85, in <module>
+        print("C1Value: " + df.loc[(df['high']>= C1Value) & (df['low']<= C1Value)].head(1))
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\common.py", line 76, in new_method
+        return method(self, other)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\arraylike.py", line 190, in __radd__
+        return self._arith_method(other, roperator.radd)
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7913, in _arith_method
+        new_data = self._dispatch_frame_op(other, op, axis=axis)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7945, in _dispatch_frame_op
+        bm = self._mgr.apply(array_op, right=right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\managers.py", line 361, in apply
+        applied = b.apply(f, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\blocks.py", line 393, in apply
+        result = func(self.values, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 283, in arithmetic_op
+        res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 218, in _na_arithmetic_op
+        result = func(left, right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\roperator.py", line 11, in radd
+        return right + left
+               ~~~~~~^~~~~~
+    numpy._core._exceptions._UFuncNoLoopError: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+[E 241024 00:40:48 test:108] Historic Api failed: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 86, in <module>
+        print("C1Value: " + df.loc[(df['high']>= C1Value) & (df['low']<= C1Value)])
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\common.py", line 76, in new_method
+        return method(self, other)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\arraylike.py", line 190, in __radd__
+        return self._arith_method(other, roperator.radd)
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7913, in _arith_method
+        new_data = self._dispatch_frame_op(other, op, axis=axis)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7945, in _dispatch_frame_op
+        bm = self._mgr.apply(array_op, right=right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\managers.py", line 361, in apply
+        applied = b.apply(f, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\blocks.py", line 393, in apply
+        result = func(self.values, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 283, in arithmetic_op
+        res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 218, in _na_arithmetic_op
+        result = func(left, right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\roperator.py", line 11, in radd
+        return right + left
+               ~~~~~~^~~~~~
+    numpy._core._exceptions._UFuncNoLoopError: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+[E 241024 00:42:57 test:108] Historic Api failed: 'NoneType' object has no attribute 'tolist'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 86, in <module>
+        print("C1Value: " + df.loc[(df['high']>= C1Value) & (df['low']<= C1Value)]['datetime']).tolist()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'NoneType' object has no attribute 'tolist'
+[E 241024 00:43:52 test:108] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 2606, in pandas._libs.hashtable.Int64HashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 2630, in pandas._libs.hashtable.Int64HashTable.get_item
+    KeyError: 0
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 86, in <module>
+        print("C1Value: " + df.loc[(df['high']>= C1Value) & (df['low']<= C1Value)]['datetime'][0])
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+        return self._get_value(key)
+               ~~~~~~~~~~~~~~~^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+        loc = self.index.get_loc(label)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241024 00:44:05 test:108] Historic Api failed: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 86, in <module>
+        print("C1Value: " + df.loc[(df['high']>= C1Value) & (df['low']<= C1Value)])
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\common.py", line 76, in new_method
+        return method(self, other)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\arraylike.py", line 190, in __radd__
+        return self._arith_method(other, roperator.radd)
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7913, in _arith_method
+        new_data = self._dispatch_frame_op(other, op, axis=axis)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7945, in _dispatch_frame_op
+        bm = self._mgr.apply(array_op, right=right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\managers.py", line 361, in apply
+        applied = b.apply(f, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\blocks.py", line 393, in apply
+        result = func(self.values, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 283, in arithmetic_op
+        res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 218, in _na_arithmetic_op
+        result = func(left, right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\roperator.py", line 11, in radd
+        return right + left
+               ~~~~~~^~~~~~
+    numpy._core._exceptions._UFuncNoLoopError: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+[E 241024 00:45:05 test:108] Historic Api failed: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 86, in <module>
+        print("C1Value: " + df.loc[(df['high']>= C1Value) & (df['low']<= C1Value)].head(1))
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\common.py", line 76, in new_method
+        return method(self, other)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\arraylike.py", line 190, in __radd__
+        return self._arith_method(other, roperator.radd)
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7913, in _arith_method
+        new_data = self._dispatch_frame_op(other, op, axis=axis)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7945, in _dispatch_frame_op
+        bm = self._mgr.apply(array_op, right=right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\managers.py", line 361, in apply
+        applied = b.apply(f, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\blocks.py", line 393, in apply
+        result = func(self.values, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 283, in arithmetic_op
+        res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 218, in _na_arithmetic_op
+        result = func(left, right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\roperator.py", line 11, in radd
+        return right + left
+               ~~~~~~^~~~~~
+    numpy._core._exceptions._UFuncNoLoopError: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+[E 241024 00:46:03 test:108] Historic Api failed: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 86, in <module>
+        print("C1Value: " + df.loc[(df['high']>= C1Value) & (df['low']<= C1Value)])
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\common.py", line 76, in new_method
+        return method(self, other)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\arraylike.py", line 190, in __radd__
+        return self._arith_method(other, roperator.radd)
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7913, in _arith_method
+        new_data = self._dispatch_frame_op(other, op, axis=axis)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 7945, in _dispatch_frame_op
+        bm = self._mgr.apply(array_op, right=right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\managers.py", line 361, in apply
+        applied = b.apply(f, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\internals\blocks.py", line 393, in apply
+        result = func(self.values, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 283, in arithmetic_op
+        res_values = _na_arithmetic_op(left, right, op)  # type: ignore[arg-type]
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\ops\array_ops.py", line 218, in _na_arithmetic_op
+        result = func(left, right)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\roperator.py", line 11, in radd
+        return right + left
+               ~~~~~~^~~~~~
+    numpy._core._exceptions._UFuncNoLoopError: ufunc 'add' did not contain a loop with signature matching types (dtype('<U9'), dtype('float64')) -> None
+[E 241024 00:51:51 test:108] Historic Api failed: can only concatenate str (not "numpy.int64") to str
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 87, in <module>
+        print("C2Value: " + df.loc[(df['high']>= C2Value) & (df['low']<= C2Value)]['datetime'].count())
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    TypeError: can only concatenate str (not "numpy.int64") to str
+[E 241024 00:52:19 test:108] Historic Api failed: can only concatenate str (not "int") to str
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 87, in <module>
+        print("C2Value: " + len(df.loc[(df['high']>= C2Value) & (df['low']<= C2Value)]['datetime']))
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    TypeError: can only concatenate str (not "int") to str
+[E 241024 00:52:31 test:108] Historic Api failed: name 'count' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 87, in <module>
+        print("C2Value: " + count(df.loc[(df['high']>= C2Value) & (df['low']<= C2Value)]['datetime']))
+                            ^^^^^
+    NameError: name 'count' is not defined. Did you mean: 'round'?
+[E 241024 01:06:13 test:121] Historic Api failed: Cannot convert 39    2024-10-18 09:54:00
+    Name: datetime, dtype: object to Excel
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 100, in <module>
+        sh1.cell(i,11).value = df.loc[(df['high']>= C2Value) & (df['low']<= C2Value)].head(1)['datetime']
+        ^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\cell\cell.py", line 218, in value
+        self._bind_value(value)
+        ~~~~~~~~~~~~~~~~^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\cell\cell.py", line 187, in _bind_value
+        raise ValueError("Cannot convert {0!r} to Excel".format(value))
+    ValueError: Cannot convert 39    2024-10-18 09:54:00
+    Name: datetime, dtype: object to Excel
+[E 241024 01:08:54 test:121] Historic Api failed: 'NoneType' object has no attribute 'df'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 99, in <module>
+        print("C2Value: " + df.loc[(df['high']>= C2Value) & (df['low']<= C2Value)].head(1)['datetime']).df.strftime('%Y-%m-%d %H:%M:%S')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'NoneType' object has no attribute 'df'
+[E 241024 21:19:29 test:128] Historic Api failed: 'NoneType' object has no attribute 'strftime'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 113, in <module>
+        print("C2Value: " + df.loc[(df['high']>= C2Value) & (df['low']<= C2Value)].head(1)['datetime']).strftime('%Y-%m-%d %H:%M:%S')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'NoneType' object has no attribute 'strftime'
+[E 241024 21:19:47 test:128] Historic Api failed: string indices must be integers, not 'str'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 118, in <module>
+        df["trade"]=df.map(checkTrade)
+                    ~~~~~~^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 10468, in map
+        return self.apply(infer).__finalize__(self, "map")
+               ~~~~~~~~~~^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 10374, in apply
+        return op.apply().__finalize__(self, method="apply")
+               ~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\apply.py", line 916, in apply
+        return self.apply_standard()
+               ~~~~~~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\apply.py", line 1063, in apply_standard
+        results, res_index = self.apply_series_generator()
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\apply.py", line 1081, in apply_series_generator
+        results[i] = self.func(v, *self.args, **self.kwargs)
+                     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 10466, in infer
+        return x._map_values(func, na_action=na_action)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\base.py", line 921, in _map_values
+        return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+        return lib.map_infer(values, mapper, convert=convert)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "lib.pyx", line 2972, in pandas._libs.lib.map_infer
+      File "D:\python project\test.py", line 116, in checkTrade
+        return df['high']
+               ~~^^^^^^^^
+    TypeError: string indices must be integers, not 'str'
+[E 241024 21:20:40 test:128] Historic Api failed: string indices must be integers, not 'str'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 118, in <module>
+        trade["trade"]=df.map(checkTrade)
+                       ~~~~~~^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 10468, in map
+        return self.apply(infer).__finalize__(self, "map")
+               ~~~~~~~~~~^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 10374, in apply
+        return op.apply().__finalize__(self, method="apply")
+               ~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\apply.py", line 916, in apply
+        return self.apply_standard()
+               ~~~~~~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\apply.py", line 1063, in apply_standard
+        results, res_index = self.apply_series_generator()
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\apply.py", line 1081, in apply_series_generator
+        results[i] = self.func(v, *self.args, **self.kwargs)
+                     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 10466, in infer
+        return x._map_values(func, na_action=na_action)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\base.py", line 921, in _map_values
+        return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+        return lib.map_infer(values, mapper, convert=convert)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "lib.pyx", line 2972, in pandas._libs.lib.map_infer
+      File "D:\python project\test.py", line 116, in checkTrade
+        return df['high']
+               ~~^^^^^^^^
+    TypeError: string indices must be integers, not 'str'
+[E 241024 21:20:55 test:128] Historic Api failed: 'float' object is not subscriptable
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 118, in <module>
+        trade["trade"]=df.map(checkTrade)
+                       ~~~~~~^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 10468, in map
+        return self.apply(infer).__finalize__(self, "map")
+               ~~~~~~~~~~^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 10374, in apply
+        return op.apply().__finalize__(self, method="apply")
+               ~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\apply.py", line 916, in apply
+        return self.apply_standard()
+               ~~~~~~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\apply.py", line 1063, in apply_standard
+        results, res_index = self.apply_series_generator()
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\apply.py", line 1081, in apply_series_generator
+        results[i] = self.func(v, *self.args, **self.kwargs)
+                     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 10466, in infer
+        return x._map_values(func, na_action=na_action)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\base.py", line 921, in _map_values
+        return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+        return lib.map_infer(values, mapper, convert=convert)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "lib.pyx", line 2972, in pandas._libs.lib.map_infer
+      File "D:\python project\test.py", line 116, in checkTrade
+        return df[0]
+               ~~^^^
+    TypeError: 'float' object is not subscriptable
+[E 241024 21:21:37 test:128] Historic Api failed: 'trade'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'trade'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 119, in <module>
+        print(trade['trade'])
+              ~~~~~^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'trade'
+[E 241024 21:22:40 test:128] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 0
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 119, in <module>
+        print(df[0])
+              ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241024 21:22:54 test:128] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 0
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 119, in <module>
+        print(df[:][0])
+              ~~~~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241024 21:36:49 test:128] Historic Api failed: (slice(None, None, None), 1)
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: (slice(None, None, None), 1)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 119, in <module>
+        print(df[:,1])
+              ~~^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3811, in get_loc
+        raise InvalidIndexError(key)
+    pandas.errors.InvalidIndexError: (slice(None, None, None), 1)
+[E 241024 21:37:08 test:128] Historic Api failed: (1, slice(None, None, None))
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: (1, slice(None, None, None))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 119, in <module>
+        print(df[1,:])
+              ~~^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3811, in get_loc
+        raise InvalidIndexError(key)
+    pandas.errors.InvalidIndexError: (1, slice(None, None, None))
+[E 241024 21:37:23 test:128] Historic Api failed: 1
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 1
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 119, in <module>
+        print(df[1])
+              ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 1
+[E 241024 21:40:46 test:129] Historic Api failed: 5
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 5
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 120, in <module>
+        print(df[:][5])
+              ~~~~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 5
+[E 241024 22:10:31 test:171] Historic Api failed: unsupported operand type(s) for &: 'float' and 'float'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 153, in <module>
+        result = evaluate_trade(df, P1Value, P1Stoploss, P1Target)
+      File "D:\python project\test.py", line 136, in evaluate_trade
+        if low <= entryValue & high>= entryValue:
+                  ~~~~~~~~~~~^~~~~~
+    TypeError: unsupported operand type(s) for &: 'float' and 'float'
+[E 241024 22:11:54 test:171] Historic Api failed: all() takes exactly one argument (2 given)
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 153, in <module>
+        result = evaluate_trade(df, P1Value, P1Stoploss, P1Target)
+      File "D:\python project\test.py", line 136, in evaluate_trade
+        if all(low <= entryValue,high>= entryValue):
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    TypeError: all() takes exactly one argument (2 given)

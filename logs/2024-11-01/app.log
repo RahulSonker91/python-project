@@ -1,0 +1,338 @@
+[E 241101 13:29:10 test:683] Historic Api failed: name 'tradeData' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 542, in <module>
+        evaluate_trade1(df,tradeData)
+                           ^^^^^^^^^
+    NameError: name 'tradeData' is not defined
+[E 241101 13:30:26 test:684] Historic Api failed: name 'C2doTrade' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 86, in <module>
+        'C2' :[C2Value,C2Stoploss,C2Target,C2doTrade],
+                                           ^^^^^^^^^
+    NameError: name 'C2doTrade' is not defined
+[E 241101 13:41:51 smartConnect:221] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6Ik1OR1pBMTA3MiIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJ0b2tlbiI6ImV5SmhiR2NpT2lKU1V6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxYzJWeVgzUjVjR1VpT2lKamJHbGxiblFpTENKMGIydGxibDkwZVhCbElqb2lkSEpoWkdWZllXTmpaWE56WDNSdmEyVnVJaXdpWjIxZmFXUWlPakV5TENKemIzVnlZMlVpT2lJeklpd2laR1YyYVdObFgybGtJam9pTURrM04yUTVabUV0T0Rrek9DMHpNREl4TFRrelpXSXROMkZqTkRVM1pqRTROV1V4SWl3aWEybGtJam9pZEhKaFpHVmZhMlY1WDNZeElpd2liMjF1WlcxaGJtRm5aWEpwWkNJNk1USXNJbkJ5YjJSMVkzUnpJanA3SW1SbGJXRjBJanA3SW5OMFlYUjFjeUk2SW1GamRHbDJaU0o5ZlN3aWFYTnpJam9pZEhKaFpHVmZiRzluYVc1ZmMyVnlkbWxqWlNJc0luTjFZaUk2SWsxT1IxcEJNVEEzTWlJc0ltVjRjQ0k2TVRjek1EVXpORGczTlN3aWJtSm1Jam94TnpNd05EUTROREUxTENKcFlYUWlPakUzTXpBME5EZzBNVFVzSW1wMGFTSTZJalZoWVRGaU9ETXhMVEF3WVRRdE5HVTFNaTA1WmprM0xUTTRaVFUyTWpZeU9USTROU0lzSWxSdmEyVnVJam9pSW4wLklPTHdyR09lUTl5WjdmRGV2aW13MTluVlFzblNNbTRIejJzM2kySVpCd3U0TzhXMzdxcFhSZ3FGZjhhbmJSWHF4ZlZXQXQ0Ui1ZQ1J5UllPY3l5Yi0xZldtYU9NSktRallVSzhxNTFTcEpxanZBNnpVWDdUMU5OMjVBLWFlOTVYaTU4aHdaQ01SMXhDbFdkRTUxUkVBOWwzNld5bm1aRGhDUVpoVlp4MWhTWSIsIkFQSS1LRVkiOiJSZ09sTU5WbCIsImlhdCI6MTczMDQ0ODQ3NSwiZXhwIjoxNzMwNTM0ODc1fQ.ycHmdDVu4RKULbrZ6dUTRb7birXXc5hiuOsB3ZEh1txRu0eUMkYCWxeUW6pbYWrLspw3mRidgS0eDeGwGctkuw'}, Request: {'exchange': 'NSE', 'symboltoken': 10099, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 15:15'}, Response: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000020007205450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 241101 13:41:51 test:684] Historic Api failed: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000020007205450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+        sock = connection.create_connection(
+            (self._dns_host, self.port),
+        ...<2 lines>...
+            socket_options=self.socket_options,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+        raise err
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+        sock.connect(sa)
+        ~~~~~~~~~~~~^^^^
+    TimeoutError: timed out
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+        response = self._make_request(
+            conn,
+        ...<10 lines>...
+            **response_kw,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+        raise new_e
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+        self._validate_conn(conn)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+        conn.connect()
+        ~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 693, in connect
+        self.sock = sock = self._new_conn()
+                           ~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 208, in _new_conn
+        raise ConnectTimeoutError(
+        ...<2 lines>...
+        ) from e
+    urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x0000020007205450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)')
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+        resp = conn.urlopen(
+            method=request.method,
+        ...<9 lines>...
+            chunked=chunked,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+        retries = retries.increment(
+            method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+        raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000020007205450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 111, in <module>
+        CS_data = smartApi.getCandleData(historicParam)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 465, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 222, in _request
+        raise e
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 210, in _request
+        r = requests.request(method,
+                                    url,
+        ...<5 lines>...
+                                    timeout=self.timeout,
+                                    proxies=self.proxies)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+        return session.request(method=method, url=url, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+        resp = self.send(prep, **send_kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+        r = adapter.send(request, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 688, in send
+        raise ConnectTimeout(e, request=request)
+    requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000020007205450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 241101 13:41:51 smartConnect:221] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/user/v1/logout. Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6Ik1OR1pBMTA3MiIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJ0b2tlbiI6ImV5SmhiR2NpT2lKU1V6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxYzJWeVgzUjVjR1VpT2lKamJHbGxiblFpTENKMGIydGxibDkwZVhCbElqb2lkSEpoWkdWZllXTmpaWE56WDNSdmEyVnVJaXdpWjIxZmFXUWlPakV5TENKemIzVnlZMlVpT2lJeklpd2laR1YyYVdObFgybGtJam9pTURrM04yUTVabUV0T0Rrek9DMHpNREl4TFRrelpXSXROMkZqTkRVM1pqRTROV1V4SWl3aWEybGtJam9pZEhKaFpHVmZhMlY1WDNZeElpd2liMjF1WlcxaGJtRm5aWEpwWkNJNk1USXNJbkJ5YjJSMVkzUnpJanA3SW1SbGJXRjBJanA3SW5OMFlYUjFjeUk2SW1GamRHbDJaU0o5ZlN3aWFYTnpJam9pZEhKaFpHVmZiRzluYVc1ZmMyVnlkbWxqWlNJc0luTjFZaUk2SWsxT1IxcEJNVEEzTWlJc0ltVjRjQ0k2TVRjek1EVXpORGczTlN3aWJtSm1Jam94TnpNd05EUTROREUxTENKcFlYUWlPakUzTXpBME5EZzBNVFVzSW1wMGFTSTZJalZoWVRGaU9ETXhMVEF3WVRRdE5HVTFNaTA1WmprM0xUTTRaVFUyTWpZeU9USTROU0lzSWxSdmEyVnVJam9pSW4wLklPTHdyR09lUTl5WjdmRGV2aW13MTluVlFzblNNbTRIejJzM2kySVpCd3U0TzhXMzdxcFhSZ3FGZjhhbmJSWHF4ZlZXQXQ0Ui1ZQ1J5UllPY3l5Yi0xZldtYU9NSktRallVSzhxNTFTcEpxanZBNnpVWDdUMU5OMjVBLWFlOTVYaTU4aHdaQ01SMXhDbFdkRTUxUkVBOWwzNld5bm1aRGhDUVpoVlp4MWhTWSIsIkFQSS1LRVkiOiJSZ09sTU5WbCIsImlhdCI6MTczMDQ0ODQ3NSwiZXhwIjoxNzMwNTM0ODc1fQ.ycHmdDVu4RKULbrZ6dUTRb7birXXc5hiuOsB3ZEh1txRu0eUMkYCWxeUW6pbYWrLspw3mRidgS0eDeGwGctkuw'}, Request: {'clientcode': 'MNGZA1072'}, Response: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/user/v1/logout (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000200072060D0>: Failed to resolve 'apiconnect.angelone.in' ([Errno 11001] getaddrinfo failed)"))
+[E 241101 13:41:51 test:690] Logout failed: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/user/v1/logout (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000200072060D0>: Failed to resolve 'apiconnect.angelone.in' ([Errno 11001] getaddrinfo failed)"))
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+        sock = connection.create_connection(
+            (self._dns_host, self.port),
+        ...<2 lines>...
+            socket_options=self.socket_options,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+        for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+        for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    socket.gaierror: [Errno 11001] getaddrinfo failed
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+        response = self._make_request(
+            conn,
+        ...<10 lines>...
+            **response_kw,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+        raise new_e
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+        self._validate_conn(conn)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+        conn.connect()
+        ~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 693, in connect
+        self.sock = sock = self._new_conn()
+                           ~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 206, in _new_conn
+        raise NameResolutionError(self.host, self, e) from e
+    urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000200072060D0>: Failed to resolve 'apiconnect.angelone.in' ([Errno 11001] getaddrinfo failed)
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+        resp = conn.urlopen(
+            method=request.method,
+        ...<9 lines>...
+            chunked=chunked,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+        retries = retries.increment(
+            method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+        raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/user/v1/logout (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000200072060D0>: Failed to resolve 'apiconnect.angelone.in' ([Errno 11001] getaddrinfo failed)"))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 687, in <module>
+        logout=smartApi.terminateSession('MNGZA1072')
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 294, in terminateSession
+        logoutResponseObject=self._postRequest("api.logout",{"clientcode":clientCode})
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 222, in _request
+        raise e
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 210, in _request
+        r = requests.request(method,
+                                    url,
+        ...<5 lines>...
+                                    timeout=self.timeout,
+                                    proxies=self.proxies)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+        return session.request(method=method, url=url, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+        resp = self.send(prep, **send_kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+        r = adapter.send(request, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 700, in send
+        raise ConnectionError(e, request=request)
+    requests.exceptions.ConnectionError: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/user/v1/logout (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000200072060D0>: Failed to resolve 'apiconnect.angelone.in' ([Errno 11001] getaddrinfo failed)"))
+[E 241101 13:42:03 smartConnect:221] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/auth/angelbroking/user/v1/loginByPassword. Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'clientcode': 'MNGZA1072', 'password': '5315', 'totp': '019640'}, Response: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/auth/angelbroking/user/v1/loginByPassword (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000216F2575A90>: Failed to resolve 'apiconnect.angelone.in' ([Errno 11001] getaddrinfo failed)"))
+[E 241101 13:47:23 smartConnect:221] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6Ik1OR1pBMTA3MiIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJ0b2tlbiI6ImV5SmhiR2NpT2lKU1V6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxYzJWeVgzUjVjR1VpT2lKamJHbGxiblFpTENKMGIydGxibDkwZVhCbElqb2lkSEpoWkdWZllXTmpaWE56WDNSdmEyVnVJaXdpWjIxZmFXUWlPakV5TENKemIzVnlZMlVpT2lJeklpd2laR1YyYVdObFgybGtJam9pTURrM04yUTVabUV0T0Rrek9DMHpNREl4TFRrelpXSXROMkZqTkRVM1pqRTROV1V4SWl3aWEybGtJam9pZEhKaFpHVmZhMlY1WDNZeElpd2liMjF1WlcxaGJtRm5aWEpwWkNJNk1USXNJbkJ5YjJSMVkzUnpJanA3SW1SbGJXRjBJanA3SW5OMFlYUjFjeUk2SW1GamRHbDJaU0o5ZlN3aWFYTnpJam9pZEhKaFpHVmZiRzluYVc1ZmMyVnlkbWxqWlNJc0luTjFZaUk2SWsxT1IxcEJNVEEzTWlJc0ltVjRjQ0k2TVRjek1EVXpOVEkxTml3aWJtSm1Jam94TnpNd05EUTROemsyTENKcFlYUWlPakUzTXpBME5EZzNPVFlzSW1wMGFTSTZJbVExTVdKa1pqRTJMVFJtWVRNdE5Ea3dPUzFpTXpGakxUa3dZVFJtTWpFNU56Y3pNeUlzSWxSdmEyVnVJam9pSW4wLm1lYmdKSEpYa3ZZS3RXZW9wbG4xdnBtT1RVTU14ZVBNUER2czNzODRNbXJGZ2pFVW1BTDNLSUdFaWEzZHB3bmgtcHR6ci1qR1JVeVFXM1hlLWxQbzM2VnRCblZTZWdCOURpUEFRc0Zzd1h3QmlvYWt6Znpsdnpsd2UwMllMREFZSW9EVmF2OXZpWUpCT1BpbldyM0hFNnhqRmZQWlgxTEpMNk5adjJLalluOCIsIkFQSS1LRVkiOiJSZ09sTU5WbCIsImlhdCI6MTczMDQ0ODg1NiwiZXhwIjoxNzMwNTM1MjU2fQ.ZcZ53-B8iG5ocg2_8CC6lk3ClL-qPZX65U0nKvAolbWPjH34zrHmboax4wTj76FswrUF7Xr73gzi8Ctfw4Ws7g'}, Request: {'exchange': 'NSE', 'symboltoken': 438, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 15:15'}, Response: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000142A8105450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 241101 13:47:23 test:684] Historic Api failed: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000142A8105450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+        sock = connection.create_connection(
+            (self._dns_host, self.port),
+        ...<2 lines>...
+            socket_options=self.socket_options,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+        raise err
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+        sock.connect(sa)
+        ~~~~~~~~~~~~^^^^
+    TimeoutError: timed out
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+        response = self._make_request(
+            conn,
+        ...<10 lines>...
+            **response_kw,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+        raise new_e
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+        self._validate_conn(conn)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+        conn.connect()
+        ~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 693, in connect
+        self.sock = sock = self._new_conn()
+                           ~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 208, in _new_conn
+        raise ConnectTimeoutError(
+        ...<2 lines>...
+        ) from e
+    urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x00000142A8105450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)')
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+        resp = conn.urlopen(
+            method=request.method,
+        ...<9 lines>...
+            chunked=chunked,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+        retries = retries.increment(
+            method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+        raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000142A8105450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 111, in <module>
+        CS_data = smartApi.getCandleData(historicParam)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 465, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 222, in _request
+        raise e
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 210, in _request
+        r = requests.request(method,
+                                    url,
+        ...<5 lines>...
+                                    timeout=self.timeout,
+                                    proxies=self.proxies)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+        return session.request(method=method, url=url, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+        resp = self.send(prep, **send_kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+        r = adapter.send(request, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 688, in send
+        raise ConnectTimeout(e, request=request)
+    requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000142A8105450>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 241101 16:49:55 test:686] Historic Api failed: cannot access local variable 'trade' where it is not associated with a value
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 545, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 167, in evaluate_trade1
+        trade
+    UnboundLocalError: cannot access local variable 'trade' where it is not associated with a value
+[E 241101 16:51:44 test:686] Historic Api failed: cannot access local variable 'trade' where it is not associated with a value
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 545, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 167, in evaluate_trade1
+        trade
+    UnboundLocalError: cannot access local variable 'trade' where it is not associated with a value
+[E 241101 17:01:41 test:686] Historic Api failed: can only concatenate str (not "int") to str
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 80, in <module>
+        P2Stoploss = P2Value+Pvalue
+                     ~~~~~~~^~~~~~~
+    TypeError: can only concatenate str (not "int") to str
+[E 241101 17:08:18 test:686] Historic Api failed: can only concatenate str (not "float") to str
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 74, in <module>
+        C2Target = C2Value+Pvalue
+                   ~~~~~~~^~~~~~~
+    TypeError: can only concatenate str (not "float") to str
+[E 241101 17:37:06 test:686] Historic Api failed: can only concatenate str (not "int") to str
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 74, in <module>
+        C2Target = C2Value+Pvalue
+                   ~~~~~~~^~~~~~~
+    TypeError: can only concatenate str (not "int") to str
+[E 241101 17:39:10 test:686] Historic Api failed: Couldn't parse the JSON response received from the server: b'Access denied because of exceeding access rate'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 230, in _request
+        data = json.loads(r.content.decode("utf8"))
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 346, in loads
+        return _default_decoder.decode(s)
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 344, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 362, in raw_decode
+        raise JSONDecodeError("Expecting value", s, err.value) from None
+    json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 111, in <module>
+        CS_data = smartApi.getCandleData(historicParam)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 465, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 233, in _request
+        raise ex.DataException("Couldn't parse the JSON response received from the server: {content}".format(
+            content=r.content))
+    SmartApi.smartExceptions.DataException: Couldn't parse the JSON response received from the server: b'Access denied because of exceeding access rate'

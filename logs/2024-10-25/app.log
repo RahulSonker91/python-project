@@ -1,0 +1,1034 @@
+[E 241025 00:24:44 test:267] Historic Api failed: name 'dt' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 97, in <module>
+        sh1.cell(i,11).value = dt.to_datetime(df.loc[(df['high']>= C2Value) & (df['low']<= C2Value)].head(1)['datetime'])
+                               ^^
+    NameError: name 'dt' is not defined
+[E 241025 00:25:31 test:267] Historic Api failed: name 'dt' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 97, in <module>
+        sh1.cell(i,11).value = dt.to_datetime(df.loc[(df['high']>= C2Value) & (df['low']<= C2Value)].head(1)['datetime'])
+                               ^^
+    NameError: name 'dt' is not defined
+[E 241025 00:26:12 test:267] Historic Api failed: 'int' object does not support item assignment
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 152, in <module>
+        result = evaluate_trade(df, C2Value, C2Stoploss, C2Target)
+      File "D:\python project\test.py", line 131, in evaluate_trade
+        index['Entry'] = row['datetime']
+        ~~~~~^^^^^^^^^
+    TypeError: 'int' object does not support item assignment
+[E 241025 00:36:39 test:272] Historic Api failed: 'Worksheet' object has no attribute 'max_col'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 47, in <module>
+        print(col=sh1.max_col)
+                  ^^^^^^^^^^^
+    AttributeError: 'Worksheet' object has no attribute 'max_col'. Did you mean: 'max_row'?
+[E 241025 00:36:51 test:272] Historic Api failed: 'Worksheet' object has no attribute 'max_col'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 47, in <module>
+        print(sh1.max_col)
+              ^^^^^^^^^^^
+    AttributeError: 'Worksheet' object has no attribute 'max_col'. Did you mean: 'max_row'?
+[E 241025 00:42:54 test:272] Historic Api failed: 'str' object has no attribute 'time'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 154, in <module>
+        result = evaluate_trade(df, C2Value, C2Stoploss, C2Target)
+      File "D:\python project\test.py", line 130, in evaluate_trade
+        if low <= entryValue and high >= entryValue and row['datetime'].time()>pd.to_datetime("09:30").time() and tradeEntry==False:
+                                                        ^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'str' object has no attribute 'time'
+[E 241025 00:43:38 test:272] Historic Api failed: 'str' object has no attribute 'dt'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 154, in <module>
+        result = evaluate_trade(df, C2Value, C2Stoploss, C2Target)
+      File "D:\python project\test.py", line 130, in evaluate_trade
+        if low <= entryValue and high >= entryValue and row['datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')>pd.to_datetime("09:30").time() and tradeEntry==False:
+                                                        ^^^^^^^^^^^^^^^^^^
+    AttributeError: 'str' object has no attribute 'dt'
+[E 241025 00:51:37 test:280] Historic Api failed: name 'result' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 153, in <module>
+        print(f"C1:-{result}")
+                     ^^^^^^
+    NameError: name 'result' is not defined. Did you mean: 'C1result'?
+[E 241025 00:52:21 test:279] Historic Api failed: name 'result' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 156, in <module>
+        df['C2Result'] = result
+                         ^^^^^^
+    NameError: name 'result' is not defined. Did you mean: 'C1result'?
+[E 241025 00:53:07 test:279] Historic Api failed: 'C2Result'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'C2Result'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 163, in <module>
+        print(df['C2Result'].head(1))
+              ~~^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'C2Result'
+[E 241025 00:54:13 test:280] Historic Api failed: 'C2Result'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'C2Result'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 164, in <module>
+        print(df['C2Result'].head(1))
+              ~~^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'C2Result'
+[E 241025 00:54:43 test:280] Historic Api failed: name 'result' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 157, in <module>
+        df['C2Result'] = result
+                         ^^^^^^
+    NameError: name 'result' is not defined. Did you mean: 'C1result'?
+[E 241025 01:03:25 test:280] Historic Api failed: Workbook.save() missing 1 required positional argument: 'filename'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 172, in <module>
+        wb.save()
+        ~~~~~~~^^
+    TypeError: Workbook.save() missing 1 required positional argument: 'filename'
+[E 241025 01:04:02 test:280] Historic Api failed: Workbook.save() missing 1 required positional argument: 'filename'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 172, in <module>
+        wb.save()
+        ~~~~~~~^^
+    TypeError: Workbook.save() missing 1 required positional argument: 'filename'
+[E 241025 01:07:35 test:280] Historic Api failed: Cannot convert 0    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    Name: C2Result, dtype: object to Excel
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 168, in <module>
+        sh1.cell(i,column+1).value =  df['C2Result'].head(1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\cell\cell.py", line 218, in value
+        self._bind_value(value)
+        ~~~~~~~~~~~~~~~~^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\cell\cell.py", line 187, in _bind_value
+        raise ValueError("Cannot convert {0!r} to Excel".format(value))
+    ValueError: Cannot convert 0    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    Name: C2Result, dtype: object to Excel
+[E 241025 01:08:10 test:280] Historic Api failed: Cannot convert 0      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    1      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    2      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    3      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    4      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+                                 ...                        
+    370    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    371    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    372    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    373    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    374    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    Name: C2Result, Length: 375, dtype: object to Excel
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 168, in <module>
+        sh1.cell(i,column+1).value =  df['C2Result']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\cell\cell.py", line 218, in value
+        self._bind_value(value)
+        ~~~~~~~~~~~~~~~~^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\cell\cell.py", line 187, in _bind_value
+        raise ValueError("Cannot convert {0!r} to Excel".format(value))
+    ValueError: Cannot convert 0      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    1      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    2      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    3      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    4      Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+                                 ...                        
+    370    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    371    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    372    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    373    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    374    Stop Loss hit at 2024-10-18 11:20:00, price: 5...
+    Name: C2Result, Length: 375, dtype: object to Excel
+[E 241025 01:11:05 test:280] Historic Api failed: can only concatenate str (not "float") to str
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 69, in <module>
+        C2Target = C2Value+Pvalue
+                   ~~~~~~~^~~~~~~
+    TypeError: can only concatenate str (not "float") to str
+[E 241025 01:19:32 test:282] Historic Api failed: unsupported operand type(s) for +: 'float' and 'NoneType'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 69, in <module>
+        C1Target = C1Value+Pvalue
+                   ~~~~~~~^~~~~~~
+    TypeError: unsupported operand type(s) for +: 'float' and 'NoneType'
+[E 241025 11:50:53 test:284] Historic Api failed: name 'strptime' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 99, in <module>
+        print(type(strptime(df['datetime'][0],'%Y-%m-%d %H:%M:%S')))
+                   ^^^^^^^^
+    NameError: name 'strptime' is not defined
+[E 241025 11:51:39 test:284] Historic Api failed: name 'strptime' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 99, in <module>
+        print(type(strptime(f"{df['datetime'][0]}",'%Y-%m-%d %H:%M:%S')))
+                   ^^^^^^^^
+    NameError: name 'strptime' is not defined
+[E 241025 11:57:20 test:284] Historic Api failed: '>' not supported between instances of 'datetime.time' and 'datetime.datetime'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 99, in <module>
+        print(datetime.strptime(f"{df['datetime'][0]}",'%Y-%m-%d %H:%M:%S').time() > datetime.strptime("09:20","%H:%M"))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    TypeError: '>' not supported between instances of 'datetime.time' and 'datetime.datetime'
+[E 241025 12:04:58 test:291] Historic Api failed: 'tradeStatus'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'tradeStatus'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 176, in <module>
+        print(df['tradeStatus'])
+              ~~^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'tradeStatus'
+[E 241025 12:20:36 test:295] Historic Api failed: string indices must be integers, not 'str'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 180, in <module>
+        print(df1['tradeStatus'])
+              ~~~^^^^^^^^^^^^^^^
+    TypeError: string indices must be integers, not 'str'
+[E 241025 12:33:21 test:293] Historic Api failed: 'trade entered'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 178, in <module>
+        print(df['tradeStatus'].loc['trade entered'])
+              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1191, in __getitem__
+        return self._getitem_axis(maybe_callable, axis=axis)
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1431, in _getitem_axis
+        return self._get_label(key, axis=axis)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1381, in _get_label
+        return self.obj.xs(label, axis=axis)
+               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 4301, in xs
+        loc = index.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 417, in get_loc
+        raise KeyError(key)
+    KeyError: 'trade entered'
+[E 241025 12:40:39 test:299] Historic Api failed: expected string or bytes-like object, got 'int'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 183, in <module>
+        df.to_excel(writer, sheet_name=sh1.cell(i, 2).value, index=False)
+        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+        return func(*args, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 2417, in to_excel
+        formatter.write(
+        ~~~~~~~~~~~~~~~^
+            excel_writer,
+            ^^^^^^^^^^^^^
+        ...<6 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\excel.py", line 952, in write
+        writer._write_cells(
+        ~~~~~~~~~~~~~~~~~~~^
+            formatted_cells,
+            ^^^^^^^^^^^^^^^^
+        ...<3 lines>...
+            freeze_panes=freeze_panes,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 478, in _write_cells
+        wks.title = sheet_name
+        ^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\workbook\child.py", line 90, in title
+        m = INVALID_TITLE_REGEX.search(value)
+    TypeError: expected string or bytes-like object, got 'int'
+[E 241025 12:42:23 test:298] Historic Api failed: expected string or bytes-like object, got 'int'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 182, in <module>
+        df.to_excel(writer, sheet_name=sh1.cell(i, 2).value, index=False)
+        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+        return func(*args, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 2417, in to_excel
+        formatter.write(
+        ~~~~~~~~~~~~~~~^
+            excel_writer,
+            ^^^^^^^^^^^^^
+        ...<6 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\excel.py", line 952, in write
+        writer._write_cells(
+        ~~~~~~~~~~~~~~~~~~~^
+            formatted_cells,
+            ^^^^^^^^^^^^^^^^
+        ...<3 lines>...
+            freeze_panes=freeze_panes,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 478, in _write_cells
+        wks.title = sheet_name
+        ^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\workbook\child.py", line 90, in title
+        m = INVALID_TITLE_REGEX.search(value)
+    TypeError: expected string or bytes-like object, got 'int'
+[E 241025 12:43:13 test:298] Historic Api failed: Sheet 'AARTIIND' already exists and if_sheet_exists is set to 'error'.
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 182, in <module>
+        df.to_excel(writer, sheet_name=sh1.cell(i, 1).value, index=False)
+        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+        return func(*args, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 2417, in to_excel
+        formatter.write(
+        ~~~~~~~~~~~~~~~^
+            excel_writer,
+            ^^^^^^^^^^^^^
+        ...<6 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\formats\excel.py", line 952, in write
+        writer._write_cells(
+        ~~~~~~~~~~~~~~~~~~~^
+            formatted_cells,
+            ^^^^^^^^^^^^^^^^
+        ...<3 lines>...
+            freeze_panes=freeze_panes,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 463, in _write_cells
+        raise ValueError(
+        ...<2 lines>...
+        )
+    ValueError: Sheet 'AARTIIND' already exists and if_sheet_exists is set to 'error'.
+[E 241025 12:54:02 test:301] Historic Api failed: [Errno 13] Permission denied: 'NSE_stockTokens.xlsx'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 183, in <module>
+        with pd.ExcelWriter("NSE_stockTokens.xlsx", engine='openpyxl', mode='a') as writer:
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 61, in __init__
+        super().__init__(
+        ~~~~~~~~~~~~~~~~^
+            path,
+            ^^^^^
+        ...<3 lines>...
+            engine_kwargs=engine_kwargs,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\excel\_base.py", line 1246, in __init__
+        self._handles = get_handle(
+                        ~~~~~~~~~~^
+            path, mode, storage_options=storage_options, is_text=False
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+        handle = open(handle, ioargs.mode)
+    PermissionError: [Errno 13] Permission denied: 'NSE_stockTokens.xlsx'
+[E 241025 13:00:50 test:301] Historic Api failed: [Errno 22] Invalid argument: 'NSE_stockTokens.xlsx'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 177, in <module>
+        wb.save("NSE_stockTokens.xlsx")
+        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+        save_workbook(self, filename)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+        archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1362, in __init__
+        self.fp = io.open(file, filemode)
+                  ~~~~~~~^^^^^^^^^^^^^^^^
+    OSError: [Errno 22] Invalid argument: 'NSE_stockTokens.xlsx'
+[E 241025 13:28:58 test:302] Historic Api failed: 'tradeStatus'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'tradeStatus'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 180, in <module>
+        print(df.loc[df['tradeStatus']==('Trade entered')])
+                     ~~^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'tradeStatus'
+[E 241025 13:32:09 smartConnect:246] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Error: Something Went Wrong, Please Try After Sometime. URL: https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData, Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB'}, Request: {'exchange': 'NSE', 'symboltoken': 7, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 15:30'}, Response: {'message': 'Something Went Wrong, Please Try After Sometime', 'errorcode': 'AB1004', 'status': False, 'data': None}
+[E 241025 13:32:09 test:302] Historic Api failed: 0
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+        return self._range.index(new_key)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^
+    ValueError: 0 is not in range
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 86, in <module>
+        df[0] = pd.to_datetime(df[0], format='%Y-%m-%dT%H:%M:%S%z')
+                               ~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+        raise KeyError(key) from err
+    KeyError: 0
+[E 241025 13:39:41 test:302] Historic Api failed: 'tradeStatus'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'tradeStatus'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 180, in <module>
+        print(df.loc[df['tradeStatus']==('Target Hit')])
+                     ~~^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'tradeStatus'
+[E 241025 13:41:47 test:302] Historic Api failed: 'tradeStatus'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'tradeStatus'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 180, in <module>
+        print(df.loc[df['tradeStatus']==('Target Hit')])
+                     ~~^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'tradeStatus'
+[E 241025 13:44:51 test:302] Historic Api failed: [Errno 13] Permission denied: 'NSE_stockTokens.xlsx'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 194, in <module>
+        wb.save("NSE_stockTokens.xlsx")
+        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+        save_workbook(self, filename)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+        archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1362, in __init__
+        self.fp = io.open(file, filemode)
+                  ~~~~~~~^^^^^^^^^^^^^^^^
+    PermissionError: [Errno 13] Permission denied: 'NSE_stockTokens.xlsx'
+[E 241025 13:45:39 test:302] Historic Api failed: 'tradeStatus'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'tradeStatus'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 180, in <module>
+        print(df.loc[df['tradeStatus']==('Target Hit')])
+                     ~~^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'tradeStatus'
+[E 241025 13:48:57 test:302] Historic Api failed: 'tradeStatus'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'tradeStatus'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 180, in <module>
+        print(df.loc[df['tradeStatus']==('Target Hit')])
+                     ~~^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'tradeStatus'
+[E 241025 13:51:39 test:302] Historic Api failed: 'tradeStatus'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'tradeStatus'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 180, in <module>
+        print(df.loc[df['tradeStatus']==('Target Hit')])
+                     ~~^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'tradeStatus'
+[E 241025 13:57:29 test:302] Historic Api failed: 'tradeStatus'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'tradeStatus'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 180, in <module>
+        print(df.loc[df['tradeStatus']==('Target Hit')])
+                     ~~^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'tradeStatus'
+[E 241025 14:03:38 test:302] Historic Api failed: [Errno 22] Invalid argument: 'NSE_stockTokens.xlsx'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 194, in <module>
+        wb.save("NSE_stockTokens.xlsx")
+        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+        save_workbook(self, filename)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+        archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1362, in __init__
+        self.fp = io.open(file, filemode)
+                  ~~~~~~~^^^^^^^^^^^^^^^^
+    OSError: [Errno 22] Invalid argument: 'NSE_stockTokens.xlsx'
+[E 241025 14:09:16 test:302] Historic Api failed: [Errno 22] Invalid argument: 'NSE_stockTokens.xlsx'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 194, in <module>
+        wb.save("NSE_stockTokens.xlsx")
+        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+        save_workbook(self, filename)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+        archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1362, in __init__
+        self.fp = io.open(file, filemode)
+                  ~~~~~~~^^^^^^^^^^^^^^^^
+    OSError: [Errno 22] Invalid argument: 'NSE_stockTokens.xlsx'
+[E 241025 14:14:58 test:302] Historic Api failed: [Errno 22] Invalid argument: 'NSE_stockTokens_tradeResult.xlsx'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 194, in <module>
+        wb.save("NSE_stockTokens_tradeResult.xlsx")
+        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+        save_workbook(self, filename)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+        archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1362, in __init__
+        self.fp = io.open(file, filemode)
+                  ~~~~~~~^^^^^^^^^^^^^^^^
+    OSError: [Errno 22] Invalid argument: 'NSE_stockTokens_tradeResult.xlsx'
+[E 241025 14:18:50 test:303] Historic Api failed: [Errno 22] Invalid argument: 'NSE_stockTokens_tradeResult.xlsx'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 194, in <module>
+        wb.save("NSE_stockTokens_tradeResult.xlsx")
+        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+        save_workbook(self, filename)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+        archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1362, in __init__
+        self.fp = io.open(file, filemode)
+                  ~~~~~~~^^^^^^^^^^^^^^^^
+    OSError: [Errno 22] Invalid argument: 'NSE_stockTokens_tradeResult.xlsx'
+[E 241025 14:22:49 test:303] Historic Api failed: [Errno 22] Invalid argument: 'NSE_stockTokens_tradeResult.xlsx'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 194, in <module>
+        wb.save("NSE_stockTokens_tradeResult.xlsx")
+        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+        save_workbook(self, filename)
+        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+        archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1362, in __init__
+        self.fp = io.open(file, filemode)
+                  ~~~~~~~^^^^^^^^^^^^^^^^
+    OSError: [Errno 22] Invalid argument: 'NSE_stockTokens_tradeResult.xlsx'
+[E 241025 14:26:59 smartConnect:221] Error occurred while making a POST request to https://apiconnect.angelone.in/rest/secure/angelbroking/historical/v1/getCandleData. Headers: {'Content-type': 'application/json', 'X-ClientLocalIP': '127.0.0.1', 'X-ClientPublicIP': '106.193.147.98', 'X-MACAddress': 'b0:47:e9:6c:91:c9', 'Accept': 'application/json', 'X-PrivateKey': 'RgOlMNVl', 'X-UserType': 'USER', 'X-SourceID': 'WEB', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6Ik1OR1pBMTA3MiIsInJvbGVzIjowLCJ1c2VydHlwZSI6IlVTRVIiLCJ0b2tlbiI6ImV5SmhiR2NpT2lKU1V6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoxYzJWeVgzUjVjR1VpT2lKamJHbGxiblFpTENKMGIydGxibDkwZVhCbElqb2lkSEpoWkdWZllXTmpaWE56WDNSdmEyVnVJaXdpWjIxZmFXUWlPakV5TENKemIzVnlZMlVpT2lJeklpd2laR1YyYVdObFgybGtJam9pTURrM04yUTVabUV0T0Rrek9DMHpNREl4TFRrelpXSXROMkZqTkRVM1pqRTROV1V4SWl3aWEybGtJam9pZEhKaFpHVmZhMlY1WDNZeElpd2liMjF1WlcxaGJtRm5aWEpwWkNJNk1USXNJbkJ5YjJSMVkzUnpJanA3SW1SbGJXRjBJanA3SW5OMFlYUjFjeUk2SW1GamRHbDJaU0o5ZlN3aWFYTnpJam9pZEhKaFpHVmZiRzluYVc1ZmMyVnlkbWxqWlNJc0luTjFZaUk2SWsxT1IxcEJNVEEzTWlJc0ltVjRjQ0k2TVRjeU9Ua3pNamt6TUN3aWJtSm1Jam94TnpJNU9EUTJORGN3TENKcFlYUWlPakUzTWprNE5EWTBOekFzSW1wMGFTSTZJalpsT0RnMk1qSTNMVEJtWkRndE5HVXlNUzA1TWpjMkxUZGxZek15WldFME9XUmlNU0lzSWxSdmEyVnVJam9pSW4wLmp3R3BiaDZhS01DUDJXanBKMGRiNnJBVEtCMWpEeFBZQlpCLVJ1WEk1UTVsVWpwNU8xeXZPNWs2S2cwbW5na0l3T051dXlQN2ZzQnh0dUkwTFNlcFk5ZVJrQVI4NUFUN21OTDdqVkpNRG1XXzVEOGVtR3lIdWIzSEIwQ1JaWkUtOU5DXzFoZU9qejhfZGpZdkZpZGlYcnNIa01NeTc5VDNfY25mYjdvdV9PQSIsIkFQSS1LRVkiOiJSZ09sTU5WbCIsImlhdCI6MTcyOTg0NjUzMCwiZXhwIjoxNzI5OTMyOTMwfQ.2rg8pa7GEjd5AHX6pr4fcpo9R84VjM5v0T_BJ4u0Ns2h6_0Op4CtFf5UMPVfHN8e2-EVki95Kd44nn7D7q0uag'}, Request: {'exchange': 'NSE', 'symboltoken': 7406, 'interval': 'ONE_MINUTE', 'fromdate': '2024-10-18 09:15', 'todate': '2024-10-18 15:30'}, Response: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000013420FDFC50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 241025 14:26:59 test:303] Historic Api failed: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000013420FDFC50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 199, in _new_conn
+        sock = connection.create_connection(
+            (self._dns_host, self.port),
+        ...<2 lines>...
+            socket_options=self.socket_options,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+        raise err
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+        sock.connect(sa)
+        ~~~~~~~~~~~~^^^^
+    TimeoutError: timed out
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+        response = self._make_request(
+            conn,
+        ...<10 lines>...
+            **response_kw,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+        raise new_e
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+        self._validate_conn(conn)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+        conn.connect()
+        ~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 693, in connect
+        self.sock = sock = self._new_conn()
+                           ~~~~~~~~~~~~~~^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 208, in _new_conn
+        raise ConnectTimeoutError(
+        ...<2 lines>...
+        ) from e
+    urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x0000013420FDFC50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)')
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+        resp = conn.urlopen(
+            method=request.method,
+        ...<9 lines>...
+            chunked=chunked,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+        retries = retries.increment(
+            method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+        raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000013420FDFC50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 79, in <module>
+        CS_data = smartApi.getCandleData(historicParam)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 465, in getCandleData
+        getCandleDataResponse=self._postRequest("api.candle.data",historicDataParams)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 263, in _postRequest
+        return self._request(route, "POST", params)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 222, in _request
+        raise e
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\SmartApi\smartConnect.py", line 210, in _request
+        r = requests.request(method,
+                                    url,
+        ...<5 lines>...
+                                    timeout=self.timeout,
+                                    proxies=self.proxies)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+        return session.request(method=method, url=url, **kwargs)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+        resp = self.send(prep, **send_kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+        r = adapter.send(request, **kwargs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 688, in send
+        raise ConnectTimeout(e, request=request)
+    requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='apiconnect.angelone.in', port=443): Max retries exceeded with url: /rest/secure/angelbroking/historical/v1/getCandleData (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000013420FDFC50>, 'Connection to apiconnect.angelone.in timed out. (connect timeout=7)'))
+[E 241025 15:14:48 test:316] Historic Api failed: 2
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+        return self._range.index(new_key)
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^
+    ValueError: 2 is not in range
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 185, in <module>
+        result[i]['C1Result'] = C1result
+        ~~~~~~^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+        raise KeyError(key) from err
+    KeyError: 2
+[E 241025 15:19:20 test:315] Historic Api failed: DataFrame.__init__() got an unexpected keyword argument 'column'. Did you mean 'columns'?
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 183, in <module>
+        result=pd.DataFrame(column=['C2Result','C1Result','P1Result','P2Result'])
+    TypeError: DataFrame.__init__() got an unexpected keyword argument 'column'. Did you mean 'columns'?
+[E 241025 15:33:12 test:308] Historic Api failed: 'DataFrame' object has no attribute 'append'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 181, in <module>
+        result= result.append([C2result,C1result,P1result,P2result])
+                ^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 6299, in __getattr__
+        return object.__getattribute__(self, name)
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+    AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+[E 241025 15:33:40 test:308] Historic Api failed: 'DataFrame' object has no attribute 'append'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 181, in <module>
+        result= result.append({[C2result,C1result,P1result,P2result]})
+                ^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 6299, in __getattr__
+        return object.__getattribute__(self, name)
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+    AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+[E 241025 15:34:14 test:308] Historic Api failed: 'DataFrame' object has no attribute 'append'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 181, in <module>
+        result= result.append({[C2result,C1result,P1result,P2result]},ignore_index=true)
+                ^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 6299, in __getattr__
+        return object.__getattribute__(self, name)
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+    AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+[E 241025 15:34:28 test:308] Historic Api failed: 'DataFrame' object has no attribute 'append'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 181, in <module>
+        result= result.append(C2result,C1result,P1result,P2result)
+                ^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 6299, in __getattr__
+        return object.__getattribute__(self, name)
+               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+    AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+[E 241025 15:35:37 test:308] Historic Api failed: name 'true' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 181, in <module>
+        result= pd.concat([result,[C2result,C1result,P1result,P2result]],ignore_index=true)
+                                                                                      ^^^^
+    NameError: name 'true' is not defined. Did you mean: 'True'?
+[E 241025 15:35:46 test:308] Historic Api failed: cannot concatenate object of type '<class 'list'>'; only Series and DataFrame objs are valid
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 181, in <module>
+        result= pd.concat([result,[C2result,C1result,P1result,P2result]],ignore_index=True)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\reshape\concat.py", line 382, in concat
+        op = _Concatenator(
+            objs,
+        ...<8 lines>...
+            sort=sort,
+        )
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\reshape\concat.py", line 448, in __init__
+        ndims = self._get_ndims(objs)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\reshape\concat.py", line 489, in _get_ndims
+        raise TypeError(msg)
+    TypeError: cannot concatenate object of type '<class 'list'>'; only Series and DataFrame objs are valid
+[E 241025 15:58:07 test:308] Historic Api failed: Too many indexers
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 300, in <module>
+        print(row.loc[index,1])
+              ~~~~~~~^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+        return self._getitem_tuple(key)
+               ~~~~~~~~~~~~~~~~~~~^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1371, in _getitem_tuple
+        tup = self._validate_tuple_indexer(tup)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 962, in _validate_tuple_indexer
+        key = self._validate_key_length(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1001, in _validate_key_length
+        raise IndexingError("Too many indexers")
+    pandas.errors.IndexingError: Too many indexers
+[E 241025 16:05:13 test:311] Historic Api failed: 'int' object has no attribute 'loc'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 302, in <module>
+        col.map(print(row.loc[index,col]))
+                      ^^^^^^^
+    AttributeError: 'int' object has no attribute 'loc'
+[E 241025 16:05:37 test:311] Historic Api failed: "None of [Index(['Stop Loss hit at 2024-10-18 11:20:00, price: 509.05', None, None,\n       None],\n      dtype='object')] are in the [index]"
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 302, in <module>
+        col.map(print(result.loc[index,col]))
+                      ~~~~~~~~~~^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1184, in __getitem__
+        return self._getitem_tuple(key)
+               ~~~~~~~~~~~~~~~~~~~^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1368, in _getitem_tuple
+        return self._getitem_lowerdim(tup)
+               ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1089, in _getitem_lowerdim
+        return getattr(section, self.name)[new_key]
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1191, in __getitem__
+        return self._getitem_axis(maybe_callable, axis=axis)
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1420, in _getitem_axis
+        return self._getitem_iterable(key, axis=axis)
+               ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1360, in _getitem_iterable
+        keyarr, indexer = self._get_listlike_indexer(key, axis)
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexing.py", line 1558, in _get_listlike_indexer
+        keyarr, indexer = ax._get_indexer_strict(key, axis_name)
+                          ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+        self._raise_if_missing(keyarr, indexer, axis_name)
+        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 6249, in _raise_if_missing
+        raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+    KeyError: "None of [Index(['Stop Loss hit at 2024-10-18 11:20:00, price: 509.05', None, None,\n       None],\n      dtype='object')] are in the [index]"
+[E 241025 20:33:14 test:389] Historic Api failed: name 'PValue' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 231, in <module>
+        C1result = evaluate_trade(df, C1Value, C1Stoploss, C1Target,"C1")
+      File "D:\python project\test.py", line 190, in evaluate_trade
+        C1toploss = entryValue-PValue
+                               ^^^^^^
+    NameError: name 'PValue' is not defined. Did you mean: 'Pvalue'?
+[E 241025 20:41:08 test:381] Historic Api failed: 'Entry'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'Entry'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 98, in <module>
+        print(tradeData['Entry'])
+              ~~~~~~~~~^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'Entry'
+[E 241025 20:41:34 test:381] Historic Api failed: (slice(None, None, None), 'Entry')
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: (slice(None, None, None), 'Entry')
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 98, in <module>
+        print(tradeData[:,'Entry'])
+              ~~~~~~~~~^^^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3811, in get_loc
+        raise InvalidIndexError(key)
+    pandas.errors.InvalidIndexError: (slice(None, None, None), 'Entry')
+[E 241025 20:46:28 test:381] Historic Api failed: 'Entry'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'Entry'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 98, in <module>
+        print(tradeData['Entry'])
+              ~~~~~~~~~^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'Entry'
+[E 241025 21:06:51 test:433] Historic Api failed: 'Entry'
+    Traceback (most recent call last):
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+        return self._engine.get_loc(casted_key)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+      File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+      File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+      File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+    KeyError: 'Entry'
+    
+    The above exception was the direct cause of the following exception:
+    
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 98, in <module>
+        print(tradeData['Entry'])
+              ~~~~~~~~~^^^^^^^^^
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4102, in __getitem__
+        indexer = self.columns.get_loc(key)
+      File "C:\Users\RAHUL\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+        raise KeyError(key) from err
+    KeyError: 'Entry'
+[E 241025 21:10:26 test:441] Historic Api failed: 'str' object has no attribute 'time'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 303, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 187, in evaluate_trade1
+        candle_time = candle['datetime'].time()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'str' object has no attribute 'time'
+[E 241025 21:12:29 test:441] Historic Api failed: 'str' object has no attribute 'strptime'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 303, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 187, in evaluate_trade1
+        candle_time = candle['datetime'].strptime(f"{row['datetime']}",'%Y-%m-%d %H:%M:%S').time()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'str' object has no attribute 'strptime'
+[E 241025 21:13:52 test:441] Historic Api failed: name 'strptime' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 303, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 187, in evaluate_trade1
+        candle_time = strptime(f"{candle['datetime']}",'%Y-%m-%d %H:%M:%S').time()
+                      ^^^^^^^^
+    NameError: name 'strptime' is not defined
+[E 241025 21:26:55 test:508] Historic Api failed: 'str' object has no attribute 'time'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 370, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 183, in evaluate_trade1
+        candle_time = candle['datetime'].time()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'str' object has no attribute 'time'
+[E 241025 22:18:59 test:627] Historic Api failed: 'str' object has no attribute 'time'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 489, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 183, in evaluate_trade1
+        candle_time = candle['datetime'].time()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'str' object has no attribute 'time'
+[E 241025 22:41:25 test:672] Historic Api failed: 'str' object has no attribute 'time'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 534, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 183, in evaluate_trade1
+        candle_time = candle['datetime'].time()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'str' object has no attribute 'time'
+[E 241025 22:42:12 test:672] Historic Api failed: 'str' object has no attribute 'strftime'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 534, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 204, in evaluate_trade1
+        'Entry': candle['datetime'].strftime('%Y-%m-%d %H:%M:%S'),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'str' object has no attribute 'strftime'
+[E 241025 22:50:10 test:671] Historic Api failed: 'str' object has no attribute 'time'
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 533, in <module>
+        evaluate_trade1(df,tradeData)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+      File "D:\python project\test.py", line 291, in evaluate_trade1
+        if not exit_hit and exit_candle['datetime'].time() >= '15:15':
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AttributeError: 'str' object has no attribute 'time'
+[E 241025 23:54:22 test:669] Historic Api failed: name 'trade_results_df' is not defined
+    Traceback (most recent call last):
+      File "D:\python project\test.py", line 659, in <module>
+        print (trade_results_df)
+               ^^^^^^^^^^^^^^^^
+    NameError: name 'trade_results_df' is not defined
