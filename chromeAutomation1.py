@@ -39,8 +39,8 @@ driver.get("https://nseoptionchain.ltpcalculator.com/detailed-optain-chain/idadd
 select_element = driver.find_element(By.CSS_SELECTOR, "div.navbar-middle > select.text-black")
 select = Select(select_element)
 options = select.options
-select.select_by_value("2024-12-02")
-selected_option = select.first_selected_option
+# select.select_by_value("2024-12-02")
+# selected_option = select.first_selected_option
 # selected_option = select
 for option in options:
     # print(option.get_attribute("value"))
@@ -48,8 +48,8 @@ for option in options:
     # select.select_by_value("2024-10-21")
     
    
-    for j  in range(select.options.index(selected_option),len(options)):
-    # for j  in range(len(options)):    
+    # for j  in range(select.options.index(selected_option),len(options)):
+    for j  in range(len(options)):    
         print(j)
         # print(select.options.index(selected_option))
             
@@ -326,7 +326,7 @@ for option in options:
                     stock_data = pd.concat([stock_data, new_stock_data])
                 
                 print(stock_data)
-                stock_data.to_csv("Scrapped_IdaddyBlastData_06122024.csv",mode='a'
+                stock_data.to_csv("Scrapped_IdaddyBlastData_20122024.csv"
                 )
                 ##############################################################################################################
                 
