@@ -1,6 +1,5 @@
 import pandas as pd
 from datetime import datetime
-from logzero import logger
 import openpyxl
 import time
 import numpy as np

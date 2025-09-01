@@ -326,7 +326,7 @@ for option in options:
                     stock_data = pd.concat([stock_data, new_stock_data])
                 
                 print(stock_data)
-                stock_data.to_csv("Scrapped_IdaddyBlastData_20122024.csv"
+                stock_data.to_csv("Scrapped_IdaddyBlastData_01092024.csv"
                 )
                 ##############################################################################################################
                 
